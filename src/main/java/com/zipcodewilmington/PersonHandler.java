@@ -12,15 +12,14 @@ public class PersonHandler {
 
     public String whileLoop() {
         String result = "";
-        // create a `counter`
-        // while `counter` is less than length of array
-            // begin loop
 
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-
-            // end loop
+        Integer counter = 0;
+        while (counter < personArray.length) {
+        String firstName = personArray[counter].getFirstName();
+        String lastName = personArray[counter].getLastName();
+        result += "\nMy first name is "+firstName+"\n"+"My last name is "+lastName;
+        counter++;
+        }    // end loop
         return result;
     }
 
@@ -28,17 +27,11 @@ public class PersonHandler {
 
     public String forLoop() {
         String result = "";
-        // identify initial value
-        // identify terminal condition
-        // identify increment
-
-        // use the above clauses to declare for-loop signature
-            // begin loop
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
-
+        for(int i = 0; i< personArray.length; i++){
+            String firstName = personArray[i].getFirstName();
+            String lastName = personArray[i].getLastName();
+            result += "\nMy first name is "+firstName+"\n"+"My last name is "+lastName;
+        }
         return result;
     }
 
@@ -46,14 +39,11 @@ public class PersonHandler {
 
     public String forEachLoop() {
         String result = "";
-        // identify array's type
-        // identify array's variable-name
-
-        // use the above discoveries to declare for-each-loop signature
-            // begin loop
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
+        for(Person x :personArray){
+            String firstName = x.getFirstName();
+            String lastName = x.getLastName();
+            result += "\nMy first name is "+firstName+"\n"+"My last name is "+lastName;
+        }
 
         return result;
     }
